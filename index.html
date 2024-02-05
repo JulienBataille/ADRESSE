@@ -6,39 +6,41 @@
     <title>Adresse</title>
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 </head>
 <body style="background-color: blanchedalmond;">
-    <div class="container">
-        <form id="modal_form" action="process_form.php" method="post">
-          <div class="form-row">
-            <div class="form-group col">
-              <label for="adresse" class="control-label">Adresse</label>
-              <input type="text" class="form-control" id="adresse" name="adresse" autocomplete="off" data-toggle="tooltip" data-placement="top" title="Ce champ est intelligent... essaie d'y taper à peu près n'importequoi, par exemple : barry 65150 ;" />
-              <div class="address-feedback position-absolute list-group" style="z-index:1100;">
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-sm-3">
-              <label for="cp" class="control-label">Code Postal</label>
-              <input type="text" class="form-control" id="cp" name="cp" disabled/>
-            </div>
-            <div class="form-group col-sm-6">
-              <label for="ville">Ville</label>
-              <input type="text" class="form-control" id="ville" name="ville" disabled/>
-            </div>
-            <div class="form-group col-sm-3">
-              <label for="pays">Pays</label>
-              <input type="text" class="form-control" id="pays" name="pays" disabled/>
-            </div>
-      
-          </div>
-        </form>
+    <form >
+      <div class="row"> 
+        <div id="textNom">
+          <input type="text" class="form-control" id="nom" placeholder="Votre nom" pattern="[A-Za-z]{2,255}">
+        </div>
+        <div id="textPrenom">
+          <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" pattern="[A-Za-z]{1,255}">
+        </div>
       </div>
+      <div class="row">
+        <div id="textBirth">
+          <input type="date" class="form-control" id="birth">
+        </div>
+        <div id="textVille">
+          <input type="text" class="form-control" id="ville" placeholder="Votre ville" pattern="[A-Za-z]{2,255}">
+        </div> 
+      </div>
+      <div class="row">
+        <div id="textEmail">
+          <input type="email" class="form-control" id="email" placeholder="Votre adresse mail">
+        </div>
+      </div>
+      <div class="row">
+        <div id="textPassword">
+          <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary" onclick="verification()" type="submit"  id="bouton">Je m'inscris</button>
+      </div> 
+    </form>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
